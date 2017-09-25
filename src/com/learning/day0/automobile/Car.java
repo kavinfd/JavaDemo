@@ -1,4 +1,4 @@
-package com.learning.automobile;
+package com.learning.day0.automobile;
 
 /**
  * Created by kavin on 24/09/17.
