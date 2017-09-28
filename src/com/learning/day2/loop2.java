@@ -7,8 +7,8 @@ public class loop2 {
     static int i = 0;
 
     public static void main(String args[]) {
-        for (; checkCondition(); incrementI()) {
-            System.out.println(i);
+        for (;;) {
+            System.out.println(i++);
         }
     }
 
