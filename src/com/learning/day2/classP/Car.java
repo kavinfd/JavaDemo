@@ -32,12 +32,8 @@ public class Car {
     }
 
 
-    public int getInt(int val) {
-        return val * val;
-    }
-
-    public  int getInt(String str){
-        return str.length();
+    public  boolean isCarColorSame(Car car){
+        return this.color.equals(car.color);
     }
 
     @Override
