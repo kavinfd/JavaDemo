@@ -1,7 +1,5 @@
 package com.learning.day0.automobile;
 
-import com.learning.day0.automobile.Car;
-
 public class Main {
 
 

@@ -8,6 +8,7 @@ import java.util.Arrays;
 public class Main {
     public static Integer gStaticInt = 100;
     public Integer gNonStaticInt = 200;
+
     public Main() {
         System.out.println(gNonStaticInt);
         System.out.println(gStaticInt);
@@ -18,7 +19,7 @@ public class Main {
         Byte wb1 = b1;
         short s1 = 2;
         Short ws1 = s1;
-        int i1 = 5;
+        int i1 = 130;
         Integer Wi1 = i1;
         long l1 = 123;
         Long wl1 = l1;
@@ -31,7 +32,11 @@ public class Main {
         boolean bool1 = true;
         Boolean wBool1 = bool1;
 
-
+//        i1 = b1;
+        c1 = (char) i1;
+        int t = i1 >> 2;
+        i1 >>= 2;
+        System.out.println("Byte : " + b1);
         Integer i2 = i1 + i1;
         Byte b3 = b1;
         func2(i2);
@@ -45,7 +50,10 @@ public class Main {
         System.out.println(Arrays.toString(intArray));
         System.out.println(intArray[0]);
         System.out.println(gStaticInt);
-        System.out.println(new Main().gNonStaticInt); 
+        System.out.println(new Main().gNonStaticInt);
+
+        if(i1>2)
+            System.out.print("adsfasdf");
     }
 
     public static boolean func1(Integer[] output) {
