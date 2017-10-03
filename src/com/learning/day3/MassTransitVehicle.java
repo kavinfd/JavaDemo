@@ -10,4 +10,11 @@ public class MassTransitVehicle extends Vehicle{
         super(vendor, tyreCount, color);
         this.doorCount = doorCount;
     }
+
+    @Override
+    public String toString() {
+        return "MassTransitVehicle{" +
+                "doorCount=" + doorCount +
+                '}';
+    }
 }

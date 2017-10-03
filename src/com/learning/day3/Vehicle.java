@@ -29,4 +29,13 @@ public class Vehicle {
     public void setColor(String color) {
         this.color = color;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "vendor='" + vendor + '\'' +
+                ", tyreCount=" + tyreCount +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

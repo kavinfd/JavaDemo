@@ -6,8 +6,8 @@ package com.learning.day3;
 public class Main {
     public static void main(String args[]) {
 //        Vehicle v = new Vehicle("BMW", 4, "Red");
-        Car car = new Car("BMW", 4, "Red", 2, true, true);
-        Bike bike = new Bike("Bajaj", 2, "Black", false);
+        Car car = new Car("BMW", 4, "Red", 2, true, true, "UBER", "SHARE");
+        Bike bike = new Bike("Bajaj", 2, "Black", false, "OLA", "SOLO");
         Bus bus = new Bus("Volvo", 4, "White", 3, "Banglore-Chennai");
 
         String strArray[] = new String[10];
@@ -30,13 +30,23 @@ public class Main {
 
         car = (Car) testVeh; //Type casting
         // class inheritance hierarchy java
-        //
+        //2
 
+        MassTransitVehicle mv = car;
+        //System.out.println(bus);
 
-        System.out.println(vehicleArray[0].getVendor());
+        printCommercialPartners(car, bike);
+
     }
 
-    public static class Result{
+    public static void printCommercialPartners(CommercialVehicle... commercialVehicles){
+        for (CommercialVehicle comm:
+             commercialVehicles) {
+            System.out.println(comm.getCommercialPartner());
+        }
+    }
+
+    public static class Result {
         String vendor;
         Integer tyreCount;
 
@@ -45,6 +55,7 @@ public class Main {
             this.tyreCount = tyreCount;
         }
     }
+
     //Bad way
     public static String[] getVendors(Object objArray[]) {
         String result[] = new String[10];
