@@ -3,7 +3,7 @@ package com.learning.day3;
 /**
  * Created by kavin on 29/09/17.
  */
-public class Vehicle {
+public abstract class Vehicle {
     private String vendor;
     private Integer tyreCount;
     private String color;

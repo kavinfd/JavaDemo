@@ -35,7 +35,34 @@ public class Main {
         MassTransitVehicle mv = car;
         //System.out.println(bus);
 
-        printCommercialPartners(car, bike);
+        Vehicle v = new Vehicle("asdf",3,"asdf") {
+            @Override
+            public String toString() {
+                return "dummy to string";
+            }
+        };
+
+        CommercialVehicle cv = new CommercialVehicle() {
+            public Integer t = 3;
+            @Override
+            public String getCommercialPartner() {
+                return "OLasdfA";
+
+            }
+
+            @Override
+            public void setCommercialPartner(String commercialPartner) {
+
+            }
+
+            @Override
+            public String getBookingMethod() {
+                return "SELF";
+            }
+        };
+        printCommercialPartners(cv);
+//        System.out.println(v);
+//        printCommercialPartners(car, bike);
 
     }
 

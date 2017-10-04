@@ -6,6 +6,6 @@ package com.learning.day04;
 public class Car extends Vehicle {
 
     public Car(String vendor){
-        super(vendor);
+        super(vendor, 1);
     }
 }
