@@ -1,5 +1,7 @@
 package com.learning.day3;
 
+import java.util.function.Supplier;
+
 /**
  * Created by kavin on 29/09/17.
  */
@@ -35,7 +37,7 @@ public class Main {
         MassTransitVehicle mv = car;
         //System.out.println(bus);
 
-        Vehicle v = new Vehicle("asdf",3,"asdf") {
+        Vehicle v = new Vehicle("asdf", 3, "asdf") {
             @Override
             public String toString() {
                 return "dummy to string";
@@ -44,8 +46,10 @@ public class Main {
 
         CommercialVehicle cv = new CommercialVehicle() {
             public Integer t = 3;
+
             @Override
             public String getCommercialPartner() {
+
                 return "OLasdfA";
 
             }
@@ -60,18 +64,32 @@ public class Main {
                 return "SELF";
             }
         };
-        printCommercialPartners(cv);
+        // printCommercialPartners(cv);
+        printCommercialPartners(cv::getCommercialPartner);
+//        printCommercialPartners(cv::getBookingMethod);
+
+        //lambda
+        String var = "testvar";
+        Supplier<String> s1 = () -> "str";
+        Supplier<String> s2 = s1;
+        System.out.println(s1.equals(s2));
 //        System.out.println(v);
 //        printCommercialPartners(car, bike);
 
     }
 
-    public static void printCommercialPartners(CommercialVehicle... commercialVehicles){
-        for (CommercialVehicle comm:
-             commercialVehicles) {
+    public static void printCommercialPartners(CommercialVehicle... commercialVehicles) {
+        for (CommercialVehicle comm :
+                commercialVehicles) {
             System.out.println(comm.getCommercialPartner());
         }
     }
+
+    ////java 8
+    public static void printCommercialPartners(Supplier<String> supplier) {
+        System.out.println(supplier.get());
+    }
+    ////java 8
 
     public static class Result {
         String vendor;
