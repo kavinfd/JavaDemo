@@ -69,7 +69,7 @@ public class MainColl {
         listOfList.get(2).add("cvbjhdfgh");
 
         System.out.println(listOfList);
-        
+
 //
 ////        null <- node1 -> <- node2 -> <- node3 -> null
 //
